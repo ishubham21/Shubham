@@ -9,8 +9,11 @@ function showPage() {
 }
 /*Pre-loading screen's function end*/
 
-/*Hamburger toggle-off when clicked upon*/
-$( '.nav-item' ).on("click", function(){
-  $('.menu').click();
-});
+/*function to chnage color of navbar*/
+$(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
 
