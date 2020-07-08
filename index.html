@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="Favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="Favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Meta-->
+    <meta name="title" content="Meta Tags — Preview, Edit and Generate">
+    <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Meta Tags — Preview, Edit and Generate">
+    <meta property="og:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate">
+    <meta property="twitter:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- AniCollection.css library -->
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    
+    <!--Local stylesheet-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Shubham Gautam: Portfolio</title>
+</head>
+
+<body onload="preLoader()">
+   
+   <!---------------------------
+       This is the MAIN section
+   	   It houses all the elemnts
+   ----------------------------->
+   <section id="afterScreen" style="display: none;"  class="fade-in">
+
+       <!--Navbar-->
+       <nav class="navbar navbar-light">
+   
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="#">Shubham</a>
+
+       </nav>
+       <!--/.Navbar-->
+       
+       <!--Hamburger Navigation Menu-->
+        <label>
+          <input type='checkbox'>
+          <span class='menu'> <span class='hamburger'></span> </span>
+          <ul>
+            <li> <a href="#intro" class="nav-item">Home</a> </li>
+            <li> <a href="#about" class="nav-item">About</a> </li>
+            <li> <a href="#projects" class="nav-item">Projects</a> </li>
+            <li> <a href="#contact" class="nav-item">Contact</a> </li>
+          </ul>
+        </label>
+        
+        <!--Into section-->
+        <section id="intro">
+        	<img src="Imgs/asthetic_shubham.png" class="intro_image image-fluid slide-bottom">
+        	<h1 class="slide-left"><span>SH</span><span>UB</span><span>HA</span><span>M</span></h1>
+        	<h2 class="slide-top">‘18</h2>
+        	<h3 class="slide-right">I <span>Write,</span></h3> 
+        	<h3 class="slide-right">I <span>Code</span></h3>
+        	<a href="#about"><div class="arrow"></div></a>
+        </section>
+        
+        <!--About section-->
+        <section id="about">
+        	<h1 data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">About</h1>
+        	<img src="Imgs/Me_about.png" class="img-fluid" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal repeat">
+        	<h4 data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal repeat">
+        		<a href="#intro" class="navbar-brand">Shubham</a>
+        	</h4>
+        	<p class="text-justify" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+        		Heya! Shubham here. I'm currently an engineering undergrad, with a craze for coding and lust for writing. I started coding small webpages when I was 11. Since then, I've worked a lot in this space, be it C, C++, HTML or CSS. Also, I write fiction. I've a blog site of my own, where I often post my works of fiction and some of my thoughts. I'm an active writer on Quora and Medium too.
+        	</p>
+        </section>
+
+        <!--Project section-->
+        <section id="projects">
+        	<h1 data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">Projects</h1>
+        	<div class="row justify-content-center" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal repeat">
+        		<div class="col-md-3 col-6">
+        			<a href="https://github.com/ishubham21/Tourist-Portal.git" target="blank"><img src="Imgs/Project1.png" class="img-fluid"></a>
+        		</div>
+        		<div class="col-md-3 col-6">
+        			<a href="https://techknightsrtu.com/" target="blank"><img src="Imgs/Project2.png" class="img-fluid"></a>
+        		</div>
+        		<div class="col-md-3 col-6">
+        			<a href="https://writerry.wordpress.com/" target="blank"><img src="Imgs/Project3.png" class="img-fluid"></a>
+        		</div>
+        		<div class="col-md-3 col-6">
+        			<a href="https://github.com/ishubham21/Photolio.git" target="blank"><img src="Imgs/Project4.png" class="img-fluid"></a>
+        		</div>
+        	</div>
+        </section>
+
+        <!--Contact section-->
+        <section id="contact">
+        	<h1 data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">Contact</h1>
+            <div class="row justify-content-center mx-5 px-5" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal repeat">
+            	<div class="col-6 col-md-2">
+            		<a href="https://www.instagram.com/imxshubham/" target="blank" data-toggle="tooltip" data-placement="bottom" title="Instagram">
+            			<img src="Imgs/instagram-sketched.png" class="img-fluid">
+            		</a>
+            	</div>
+            	<div class="col-6 col-md-2">
+            		<a href="https://www.facebook.com/profile.php?id=100009728466861" target="blank" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+            			<img src="Imgs/facebook.png" class="img-fluid">
+            		</a>
+            	</div>
+            	<div class="col-6 col-md-2">
+            		<a href="https://wa.link/rva5sw" target="blank" data-toggle="tooltip" data-placement="bottom" title="Whatsapp">
+            			<img src="Imgs/whatsapp.png" class="img-fluid">
+            		</a>
+            	</div>
+            	<div class="col-6 col-md-2">
+            		<a href="https://mail.google.com/mail/?view=cm&fs=1&to=sg2199203@gmail.com" target="blank" data-toggle="tooltip" data-placement="bottom" title="Gmail">
+            			<img src="Imgs/gmail.png" class="img-fluid">
+            		</a>
+            	</div>
+            	<div class="col-6 col-md-2">
+            		<a href="https://github.com/ishubham21" target="blank" data-toggle="tooltip" data-placement="bottom" title="Github">
+            			<img src="Imgs/github-logo.png" class="img-fluid">
+            		</a>
+            	</div>
+            </div>
+        </section>
+
+        <h4 class="btm">Designed and developed by <span class="hvr-underline-from-left">Shubham</span></h4>
+        
+
+   </section>
+
+
+<!-----------------------------------
+    Preloading dots
+    They appears on preloading screen
+-------------------------------------->
+<div class="content-dot" id="loader">
+  <div class="dot dot-1"></div>
+  <div class="dot dot-2"></div>
+  <div class="dot dot-3"></div>
+</div>
+<!--SVG PreLoader-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="preld">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
+    </filter>
+  </defs>
+</svg>
+
+  <!-------------------------------------- 
+       jQuery first, then Popper.js, then Bootstrap JS
+       They are to import Bootstrap 4.0
+   -------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script
+
+  <!-- AniJS core library -->
+  <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+  
+  <!-- Include to use $addClass, $toggleClass or $removeClass -->
+  <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+
+  <!--The scrollreveal helper-->
+  <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
+
+  <!--Local Js-->
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

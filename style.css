@@ -1,0 +1,1174 @@
+body, html {
+  background-color: #f8f4d5;
+  font-family: 'Cinzel', serif;
+  scroll-behavior: smooth;
+}
+
+/*---------------------------------------------
+   Order:
+     1. Preloading dots' styling
+     2. Hamburger's styling
+     3. Fade-In Animation 
+     4. Sections' height followed by their background
+     5. Arrow: It's styling and animation
+     6. Sliding animation classes
+     7. Media queries->
+           a.
+           b.
+           c.
+           d.
+           e.
+-----------------------------------------------*/
+
+/*--------------------------
+The preloader dots and it's corresponding animations
+---------------------------*/
+.content-dot{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: auto;
+  -webkit-filter: url('#preld');
+          filter: url('#preld');
+  -webkit-animation: rotate-move 2s ease-in-out infinite;
+          animation: rotate-move 2s ease-in-out infinite;
+}
+.dot{ 
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.dot-1 {
+  background-color: #ffe386;
+  -webkit-animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+  animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+.dot-2 {
+  background-color: #10beae;
+  -webkit-animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+  animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+.dot-3 {
+  background-color: #f74d75;
+  -webkit-animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+          animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+/*Pre-loader dots*/
+@-webkit-keyframes dot-3-move {
+  20% {-webkit-transform: scale(1);transform: scale(1)}
+  45% {-webkit-transform: translateY(-18px) scale(.45);transform: translateY(-18px) scale(.45)}
+  60% {-webkit-transform: translateY(-90px) scale(.45);transform: translateY(-90px) scale(.45)}
+  80% {-webkit-transform: translateY(-90px) scale(.45);transform: translateY(-90px) scale(.45)}
+  100% {-webkit-transform: translateY(0px) scale(1);transform: translateY(0px) scale(1)}
+}
+@keyframes dot-3-move {
+  20% {-webkit-transform: scale(1);transform: scale(1)}
+  45% {-webkit-transform: translateY(-18px) scale(.45);transform: translateY(-18px) scale(.45)}
+  60% {-webkit-transform: translateY(-90px) scale(.45);transform: translateY(-90px) scale(.45)}
+  80% {-webkit-transform: translateY(-90px) scale(.45);transform: translateY(-90px) scale(.45)}
+  100% {-webkit-transform: translateY(0px) scale(1);transform: translateY(0px) scale(1)}
+}
+@-webkit-keyframes dot-2-move {
+  20% {-webkit-transform: scale(1);transform: scale(1)}
+  45% {-webkit-transform: translate(-16px, 12px) scale(.45);transform: translate(-16px, 12px) scale(.45)}
+  60% {-webkit-transform: translate(-80px, 60px) scale(.45);transform: translate(-80px, 60px) scale(.45)}
+  80% {-webkit-transform: translate(-80px, 60px) scale(.45);transform: translate(-80px, 60px) scale(.45)}
+  100% {-webkit-transform: translateY(0px) scale(1);transform: translateY(0px) scale(1)}
+}
+@keyframes dot-2-move {
+  20% {-webkit-transform: scale(1);transform: scale(1)}
+  45% {-webkit-transform: translate(-16px, 12px) scale(.45);transform: translate(-16px, 12px) scale(.45)}
+  60% {-webkit-transform: translate(-80px, 60px) scale(.45);transform: translate(-80px, 60px) scale(.45)}
+  80% {-webkit-transform: translate(-80px, 60px) scale(.45);transform: translate(-80px, 60px) scale(.45)}
+  100% {-webkit-transform: translateY(0px) scale(1);transform: translateY(0px) scale(1)}
+}
+@-webkit-keyframes dot-1-move {
+  20% {-webkit-transform: scale(1);transform: scale(1)}
+  45% {-webkit-transform: translate(16px, 12px) scale(.45);transform: translate(16px, 12px) scale(.45)}
+  60% {-webkit-transform: translate(80px, 60px) scale(.45);transform: translate(80px, 60px) scale(.45)}
+  80% {-webkit-transform: translate(80px, 60px) scale(.45);transform: translate(80px, 60px) scale(.45)}
+  100% {-webkit-transform: translateY(0px) scale(1);transform: translateY(0px) scale(1)}
+}
+@keyframes dot-1-move {
+  20% {-webkit-transform: scale(1);transform: scale(1)}
+  45% {-webkit-transform: translate(16px, 12px) scale(.45);transform: translate(16px, 12px) scale(.45)}
+  60% {-webkit-transform: translate(80px, 60px) scale(.45);transform: translate(80px, 60px) scale(.45)}
+  80% {-webkit-transform: translate(80px, 60px) scale(.45);transform: translate(80px, 60px) scale(.45)}
+  100% {-webkit-transform: translateY(0px) scale(1);transform: translateY(0px) scale(1)}
+}
+@-webkit-keyframes rotate-move {
+  55% {-webkit-transform: translate(-50%, -50%) rotate(0deg);transform: translate(-50%, -50%) rotate(0deg)}
+  80% {-webkit-transform: translate(-50%, -50%) rotate(360deg);transform: translate(-50%, -50%) rotate(360deg)}
+  100% {-webkit-transform: translate(-50%, -50%) rotate(360deg);transform: translate(-50%, -50%) rotate(360deg)}
+}
+@keyframes rotate-move {
+  55% {-webkit-transform: translate(-50%, -50%) rotate(0deg);transform: translate(-50%, -50%) rotate(0deg)}
+  80% {-webkit-transform: translate(-50%, -50%) rotate(360deg);transform: translate(-50%, -50%) rotate(360deg)}
+  100% {-webkit-transform: translate(-50%, -50%) rotate(360deg);transform: translate(-50%, -50%) rotate(360deg)}
+}
+@-webkit-keyframes index {
+  0%, 100% {z-index: 3}
+  33.3% {z-index: 2}
+  66.6% {z-index: 1}
+}
+@keyframes index {
+  0%, 100% {z-index: 3}
+  33.3% {z-index: 2}
+  66.6% {z-index: 1}
+}
+/*Dot ends*/
+
+
+/*--------------------------------------------
+  Styling for Hamburger (Rightmost-Top corner)
+  --------------------------------------------*/
+label .menu {
+  position: fixed;
+  right: 0vw;
+  top: -6vw;
+  z-index: 100;
+  width: 7vw;
+  height: 11vw;
+  background: #FFF;
+  border-bottom-left-radius: 80% 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
+  width: 1.9vw;
+  height: 0.15vw;
+  background: #000;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2vw;
+  height: 0.15vw;
+  background: #000;
+}
+
+label .hamburger:before { top: -0.6vw; }
+
+label .hamburger:after { bottom: -0.6vw; }
+
+label input { display: none; }
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+             bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+                top: 0;
+}
+
+label input:checked + .menu + ul { opacity: 1; }
+
+label ul {
+  list-style: none;
+  z-index: 200;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .25s 0s ease-in-out;
+          transition: .25s 0s ease-in-out;
+  text-align: center;
+}
+
+label a {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+label a:hover {
+  text-decoration: none;
+  color: black;
+}
+/*Hamburger ends*/
+
+
+/*------------------------------
+  Sections' height
+-------------------------------*/
+#intro, #about, #projects, #contact{
+  min-height: 100vh;
+}
+
+/*------------------------------
+   Sections' bg color
+-----------------------------*/
+#about{
+  background: #D8c0c0;
+}
+
+#projects{
+  background: #f8e9e6;
+}
+
+#contact{
+  background: #cecece;
+}
+
+
+/*-------------------------
+  Downward arrow
+  -------------------------*/
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 90vh;
+  margin: auto;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #000 solid;
+  border-bottom: 2px #000 solid;
+}
+
+.arrow:before {
+  content: "";
+  width: 1.5vw;
+  height: 1.5vw;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #000 solid;
+  border-bottom: 1px #000 solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-1vh, -1vh);
+  }
+}
+
+
+/*-------------------------------
+  Animation classes
+--------------------------*/
+
+/*Fade-in Animation*/
+.fade-in{
+  animation: fadeIn ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+/*Animation to slide SHUBHAM (H1) leftways*/
+.slide-left {
+  -webkit-animation: slide-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-13.3vw) translateY(-4vh);
+              transform: translateX(-13.3vw) translateY(-4vh);
+    }
+  }
+  @keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    }
+  100% {
+    -webkit-transform: translateX(-13.3vw) translateY(-4vh);
+            transform: translateX(-13.3vw) translateY(-4vh);
+    }
+  }
+  
+/*Animation to slide '20(H2) upwards*/ 
+.slide-top {
+    -webkit-animation: slide-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20vh);
+            transform: translateY(-20vh);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20vh);
+            transform: translateY(-20vh);
+  }
+}  
+  
+/*Animation to slide image downwards */
+.slide-bottom {
+  -webkit-animation: slide-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(13.5vh);
+              transform: translateY(13.5vh);
+    } 
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(13.5vh);
+              transform: translateY(24.5vh);
+    }
+  }
+
+/*Animation to move I write (h3) rightways*/
+.slide-right {
+    -webkit-animation: slide-right 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-right 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(16.5vw);
+              transform: translateX(16.5vw);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(16.5vw);
+              transform: translateX(16.5vw);
+    }
+}
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: black;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+
+
+/*------------------------------
+ Media queries
+ ------------------------------*/
+
+/*For styling elemnts screen sizes ranging b/w 320px and 480px*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+{
+
+  
+  nav .navbar-brand{
+    font-size: 3.7vw;
+    position: absolute;
+    padding: 0;
+    top:1vh;
+    left: 1.5vw;
+    z-index: 1; 
+  }
+  section#intro .intro_image{
+    position: absolute;
+    left: 21.5vw;
+    top: -25vh;
+    width: 50vw;
+    height: 50vw;
+    z-index: -1;
+  }
+  section#intro h1 span:nth-of-type(1){
+    position: absolute;
+    top: 16vh;
+    right: -6vw;
+    font-size: 28vw;
+  }
+  section#intro h1 span:nth-of-type(2){
+    position: absolute;
+    top: 30vh;
+    right: -6vw;
+    font-size: 28vw; 
+  }
+  section#intro h1 span:nth-of-type(3){
+    position: absolute;
+    top: 44vh;
+    right: -11vw;
+    font-size: 28vw;
+  }
+  section#intro h1 span:nth-of-type(4){
+    position: absolute;
+    top: 58vh;
+    right: 4.4vw;
+    font-size: 28vw;
+  }
+  section#intro h2{
+    display: none;
+    position: absolute;
+    top: 60vh;
+    left: -12.5vw;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 14vw;  
+  }
+  section#intro h3:nth-of-type(1){
+    position: absolute;
+    top: 45vh;
+    left: -3vw;
+    font-size: 14vw;
+  }
+  section#intro h3:nth-of-type(2){
+    position: absolute;
+    top: 52vh;
+    left: 5.5vw;
+    font-size: 14vw;
+  }
+  section#intro h3 span{
+    font-size: 6vw;
+    font-style: italic;
+  }
+   
+  section#about h1{
+    font-size: 21vw;
+    text-align: center;
+  }
+  section#about img{
+    padding: 2vw 5vw;
+  }
+  section#about h4{
+    display: none;
+  }
+  section#about p{
+    width: 90%;
+    position: relative;
+    left: 4.5vw;
+    font-size: 4.2vw;
+  }
+
+  section#projects h1{
+    font-size: 21vw;
+    text-align: center;
+  }
+  section#projects .row{
+    position: absolute;
+    top: 245vh;
+  }
+
+  section#contact h1{
+    font-size: 21vw;
+    text-align: center;
+  }
+  section#contact .row{
+    position: absolute;
+    top: 345vh;
+  }
+  section#contact img{
+    margin: 0 3vw;
+  }
+  section#contact .col-6{
+    margin: 1vw;
+  }
+  .btm{
+    text-align: center;
+    font-size: 7vw;
+    position: absolute;
+    top: 420vh;
+  }
+}
+
+
+/*For styling elemnts screen size ranging b/w 480px and 630px*/
+@media only screen and (min-width : 480px) and (max-width: 630px){
+  
+  nav .navbar-brand{
+    font-size: 3vw;
+    position: absolute;
+    padding: 0;
+    top:1vh;
+    left: 1.5vw; 
+  }
+  section#intro .intro_image{
+    position: absolute;
+    left: 18.5vw;
+    top: -30vh;
+    width: 46vw;
+    height: 46vw;
+    z-index: -1;
+  }
+  section#intro h1 span:nth-of-type(1){
+    position: absolute;
+    top: 20vh;
+    right: 2vw;
+    font-size: 16vw;
+  }
+  section#intro h1 span:nth-of-type(2){
+    position: absolute;
+    top: 33.5vh;
+    right: 2vw;
+    font-size: 16vw;
+  }
+  section#intro h1 span:nth-of-type(3){
+    position: absolute;
+    top: 46.5vh;
+    right: -1vw;
+    font-size: 16vw;
+  }
+  section#intro h1 span:nth-of-type(4){
+    position: absolute;
+    top: 59.5vh;
+    right: 8vw;
+    font-size: 16vw; 
+  }
+  section#intro h2{
+    position: absolute;
+    top: 62vh;
+    left: -11.5vw;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 12vw;  
+  }
+  section#intro h3:nth-of-type(1){
+    position: absolute;
+    top: 50vh;
+    left: 8vw;
+    font-size: 12vw;
+  }
+  section#intro h3:nth-of-type(2){
+    position: absolute;
+    top: 58vh;
+    left: 12.5vw;
+    font-size: 12vw;
+  }
+  section#intro h3 span{
+    font-size: 5vw;
+    font-style: italic;
+  }
+    /*Styling for 'About' section*/
+    section#about h1{
+    font-size: 15vw;
+    text-align: center;
+  }
+  section#about img{
+    margin-left: 18vw;
+    width: 60vw;
+    padding: 2vw 5vw;
+  }
+  section#about h4{
+    display: none;
+  }
+  section#about p{
+    width: 80%;
+    position: relative;
+    left: 4.5vw;
+    font-size: 2.5vw;
+    margin-left: 6vw;
+  }
+
+  section#projects h1{
+    font-size: 15vw;
+    text-align: center;
+  }
+  section#projects .row{
+    position: absolute;
+    top: 250vh;
+    margin-left: 6vw;
+  }
+  section#projects img{
+    width: 30vw;
+  }
+
+  section#contact h1{
+    font-size: 15vw;
+    text-align: center;
+  }
+  section#contact .row{
+    position: absolute;
+    top: 345vh;
+
+  }
+  section#contact img{
+    width: 10vh;
+    margin-left: 8vw;
+  }
+  section#contact .col-6{
+    margin: 1vw;
+  }
+  .btm{
+    text-align: center;
+    font-size: 4vw;
+    position: absolute;
+    top: 440vh;
+    margin-left: 10vw;
+  }
+}
+
+
+/*For styling elements screen size ranging b/w 630px and 800px*/
+@media only screen and (min-width: 630px) and (max-width: 800px){
+  
+  nav .navbar-brand{
+    font-size: 2.2vw;
+    position: absolute;
+    padding: 0;
+    top:1vh;
+    left: 1.5vw; 
+  }
+  section#intro .intro_image{
+    position: absolute;
+    left: 13.5vw;
+    top: -30vh;
+    width: 38vw;
+    height: 38vw;
+    z-index: -1;
+  }
+   section#intro h1 span:nth-of-type(1){
+    position: absolute;
+    top: 29vh;
+    right: 20vw;
+    font-size: 16vw;  
+  }
+  section#intro h1 span:nth-of-type(2){
+    position: absolute;
+    top: 29vh;
+    right: -1vw;
+    font-size: 16vw;
+  }
+  section#intro h1 span:nth-of-type(3){
+    position: absolute;
+    top: 46.5vh;
+    right: 17vw;
+    font-size: 16vw;
+  }
+  section#intro h1 span:nth-of-type(4){
+    position: absolute;
+    top: 46.5vh;
+    right: 2vw;
+    font-size: 16vw; 
+  }
+  section#intro h2{
+    position: absolute;
+    top: 62vh;
+    left: -11.5vw;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 12vw;  
+  }
+  section#intro h3:nth-of-type(1){
+    position: absolute;
+    top: 68vh;
+    left: 3vw;
+    font-size: 10vw;
+  }
+  section#intro h3:nth-of-type(2){
+    position: absolute;
+    top: 77vh;
+    left: 6.5vw;
+    font-size: 10vw;
+  }
+  section#intro h3 span{
+    font-size: 3.5vw;
+    font-style: italic;
+  }
+    /*Styling for 'About' section*/
+  section#about img{
+    position: absolute;
+    top:135vh;
+    left: 18vw;
+    width: 37vw;
+    height: auto;
+  }
+  section#about h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    left: 5vw;
+    letter-spacing: 0.50vw;
+    z-index: 2;
+  }
+  section#about h4{
+    position: absolute;
+    top: 197vh;
+    left: 7vw;
+    font-size: 1.20vw;
+  }
+  section#about a{
+    color: black;
+  }
+  section#about p{
+    width: 25vw;
+    position: absolute;
+    right: 13vw;
+    line-height: 6vh;
+    top: 122vh;
+    font-size: 1.5vw;
+  }
+  
+  /*Styling for 'Projects' section*/
+  section#projects h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    right: 5vw;
+    z-index: 2;
+  }
+  section#projects .row{
+    position: absolute;
+    padding-left: 10vw;
+    top: 230vh;
+  }
+  section#projects img{
+    width: 32vw;
+    height: auto;
+  }
+
+  /*Styling for 'Contact' section*/
+  section#contact h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    left: 5vw;
+    z-index: 2;
+  }
+  section#contact .row{
+    position: absolute;
+    top: 334vh;
+    margin-left: 10vw;
+  }
+  section#contact img{
+    width: 15vw;
+    padding: 2vw;
+    margin-left: 8vw;
+  }
+
+  .btm{
+    text-align: center;
+    padding-top: 20vh;
+  }
+}
+
+/*For styling elements screen size ranging b/w 800px and 1050px*/
+@media only screen and (min-width: 800px) and (max-width: 1050px){
+  
+  nav .navbar-brand{
+    font-size: 2.2vw;
+    position: absolute;
+    padding: 0;
+    top:1vh;
+    left: 1.5vw; 
+  }
+  section#intro .intro_image{
+    position: absolute;
+    left: 13.5vw;
+    top: -30vh;
+    width: 32vw;
+    height: 32vw;
+    z-index: 1;
+  }
+  section#intro h1{
+    position: absolute;
+    top: 40vh;
+    right: -12.9vw;
+    font-size: 13vw;
+    z-index: 2  
+  }
+  section#intro h2{
+    position: absolute;
+    top: 57vh;
+    left: -14.5vw;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 14vw;  
+  }
+  section#intro h3:nth-of-type(1){
+    position: absolute;
+    top: 65vh;
+    left: 5vw;
+    font-size: 6.5vw;
+  }
+  section#intro h3:nth-of-type(2){
+    position: absolute;
+    top: 73vh;
+    left: 7vw;
+    font-size: 6.5vw;
+  }
+  section#intro h3 span{
+    font-size: 2.9vw;
+    font-style: italic;
+  }
+    /*Styling for 'About' section*/
+  section#about img{
+    position: absolute;
+    top:135vh;
+    left: 23vw;
+    width: 30vw;
+    height: auto;
+  }
+  section#about h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    left: 5vw;
+    letter-spacing: 0.50vw;
+    z-index: 2;
+  }
+  section#about h4{
+    position: absolute;
+    top: 197vh;
+    left: 7vw;
+    font-size: 1.20vw;
+  }
+  section#about a{
+    color: black;
+  }
+  section#about p{
+    width: 25vw;
+    position: absolute;
+    right: 13vw;
+    line-height: 6vh;
+    top: 122vh;
+    font-size: 1.25vw;
+  }
+  
+  /*Styling for 'Projects' section*/
+  section#projects h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    right: 5vw;
+    z-index: 2;
+  }
+  section#projects .row{
+    position: absolute;
+    top: 246vh;
+  }
+
+  /*Styling for 'Contact' section*/
+  section#contact h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    left: 5vw;
+    z-index: 2;
+  }
+  section#contact .row{
+    position: absolute;
+    top: 354vh;
+  }
+
+  .btm{
+    text-align: center;
+    padding-top: 20vh;
+  }
+}
+
+/*For styling elements: 1050px+ screen sizes*/
+@media only screen and (min-width: 1050px){
+  
+  nav .navbar-brand{
+    font-size: 1.7vw;
+    position: absolute;
+    padding: 0;
+    top:1vh;
+    left: 1.5vw; 
+  }
+  section#intro .intro_image{
+    position: absolute;
+    left: 13.5vw;
+    top: -30vh;
+    width: 28vw;
+    height: 28vw;
+    z-index: 1;
+  }
+  section#intro h1{
+    position: absolute;
+    top: 40vh;
+    right: -20vw;
+    font-size: 12vw;
+    z-index: 2  
+  }
+  section#intro h2{
+    position: absolute;
+    top: 55vh;
+    left: -11.5vw;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 12vw;  
+  }
+  section#intro h3:nth-of-type(1){
+    position: absolute;
+    top: 71vh;
+    left: 5vw;
+    font-size: 4vw;
+  }
+  section#intro h3:nth-of-type(2){
+    position: absolute;
+    top: 77vh;
+    left: 9.5vw;
+    font-size: 4vw;
+  }
+  section#intro h3 span{
+    font-size: 2.4vw;
+    font-style: italic;
+  }
+   
+/*Animation to slide SHUBHAM (H1) leftways*/
+  .slide-left {
+    -webkit-animation: slide-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-25.3vw);
+              transform: translateX(-25.3vw) ;
+    }
+  }
+  @keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    }
+  100% {
+    -webkit-transform: translateX(-25.3vw);
+    transform: translateX(-25.3vw);
+    }
+  }
+  
+  /*Styling for 'About' section*/
+  section#about img{
+    position: absolute;
+    top:135vh;
+    left: 23vw;
+    width: 30vw;
+    height: auto;
+  }
+  section#about h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    left: 5vw;
+    letter-spacing: 0.50vw;
+    z-index: 2;
+  }
+  section#about h4{
+    position: absolute;
+    top: 197vh;
+    left: 7vw;
+    font-size: 1.20vw;
+  }
+  section#about a{
+    color: black;
+  }
+  section#about p{
+    width: 25vw;
+    position: absolute;
+    right: 13vw;
+    line-height: 6vh;
+    top: 122vh;
+    font-size: 1.25vw;
+  }
+  
+  /*Styling for 'Projects' section*/
+  section#projects h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    right: 5vw;
+    z-index: 2;
+  }
+  section#projects .row{
+    position: absolute;
+    top: 246vh;
+  }
+
+  /*Styling for 'Contact' section*/
+  section#contact h1{
+    position: absolute;
+    font-size: 11.5vw;
+    top: 105vh);
+    left: 5vw;
+    z-index: 2;
+  }
+  section#contact .row{
+    position: absolute;
+    top: 354vh;
+  }
+
+  .btm{
+    text-align: center;
+    padding-top: 20vh;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
