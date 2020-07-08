@@ -2,6 +2,7 @@ body, html {
   background-color: #f8f4d5;
   font-family: 'Cinzel', serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /*---------------------------------------------
