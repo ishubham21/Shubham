@@ -970,12 +970,12 @@ The preloader dots and it's corresponding animations
     top:1vh;
     left: 1.5vw; 
   }
-  section#intro img{
+  section#intro .intro_image{
     position: absolute;
     left: 13.5vw;
     top: -32vh;
-    width: 23vw;
-    height: auto;
+    width: 28vw;
+    height: 28vw;
     z-index: 1;
     overflow-y: hidden;
   }
@@ -1042,7 +1042,7 @@ The preloader dots and it's corresponding animations
     position: absolute;
     top:130vh;
     left: 23vw;
-    width: 30vw;
+    width: 28vw;
     height: auto;
   }
   section#about h1{
