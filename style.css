@@ -141,6 +141,7 @@ The preloader dots and it's corresponding animations
 -------------------------------*/
 #intro, #about, #projects, #contact{
   min-height: 100vh;
+  min-width: 100%;
 }
 
 /*------------------------------
@@ -520,8 +521,8 @@ The preloader dots and it's corresponding animations
   }
   section#projects .row{
     position: absolute;
-    margin-left: 20vw;
-    top: 218vh;
+    margin-left: 2vw;
+    top: 230vh;
   }
   section#projects img{
     width: 40vw;
@@ -553,7 +554,7 @@ The preloader dots and it's corresponding animations
     text-align: center;
     font-size: 7vw;
     position: absolute;
-    top: 420vh;
+    top: 405vh;
   }
 }
 
@@ -969,13 +970,14 @@ The preloader dots and it's corresponding animations
     top:1vh;
     left: 1.5vw; 
   }
-  section#intro .intro_image{
+  section#intro img{
     position: absolute;
     left: 13.5vw;
-    top: -30vh;
-    width: 28vw;
-    height: 28vw;
+    top: -32vh;
+    width: 23vw;
+    height: auto;
     z-index: 1;
+    overflow-y: hidden;
   }
   section#intro h1{
     position: absolute;
