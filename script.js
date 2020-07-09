@@ -1,7 +1,7 @@
 /*For pre-loading screen*/
 var tymout;
 function preLoader() {
-  tymout = setTimeout(showPage, 000);
+  tymout = setTimeout(showPage, 4000);
 }
 function showPage() {
   document.getElementById("loader").style.display = "none";
