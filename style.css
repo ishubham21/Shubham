@@ -5,6 +5,10 @@ body, html {
   overflow-x: hidden;
 }
 
+#afterScreen{
+  overflow-x: hidden;
+}
+
 /*---------------------------------------------
    Order:
      1. Preloading dots' styling
